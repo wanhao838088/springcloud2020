@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface PaymentDao {
 
-    @Insert("INSERT INTO `payment` VALUES(#{serial});")
+    @Insert("INSERT INTO `payment`(serial) VALUES(#{serial});")
     int create(Payment payment);
 
     @Select("SELECT * FROM `payment` WHERE id=#{id}")
