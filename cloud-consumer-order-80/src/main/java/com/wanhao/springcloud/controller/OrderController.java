@@ -3,10 +3,7 @@ package com.wanhao.springcloud.controller;
 import com.wanhao.springcloud.entities.CommonResult;
 import com.wanhao.springcloud.entities.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -25,9 +22,24 @@ public class OrderController {
      */
     private static final String BASE_URL = "http://localhost:8001/";
 
+    /**
+     * 查询
+     * @param id
+     * @return
+     */
     @GetMapping(value = "order/{id}")
     public CommonResult<Payment> queryById(@PathVariable("id")String id){
-        CommonResult<Payment> commonResult = restTemplate.getForObject(BASE_URL + "payment/" + id, CommonResult.class);
-        return commonResult;
+        return restTemplate.getForObject(BASE_URL + "payment/" + id, CommonResult.class);
     }
+
+    /**
+     * 创建
+     * @param payment
+     * @return
+     */
+    @GetMapping(value = "order/create")
+    public CommonResult<Payment> create(Payment payment){
+        return restTemplate.postForObject(BASE_URL + "payment/create",payment,CommonResult.class);
+    }
+
 }
