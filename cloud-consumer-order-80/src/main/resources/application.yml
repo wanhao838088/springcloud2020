@@ -11,3 +11,8 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:7001/eureka
+  instance:
+    # 实例名
+    instance-id: order80
+    # 显示Ip
+    prefer-ip-address: true
