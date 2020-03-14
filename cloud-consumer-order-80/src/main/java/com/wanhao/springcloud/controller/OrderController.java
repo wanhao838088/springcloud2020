@@ -20,7 +20,7 @@ public class OrderController {
     /**
      * 基地址
      */
-    private static final String BASE_URL = "http://localhost:8001/";
+    private static final String BASE_URL = "http://CLOUD-PAYMENT-SERVICE/";
 
     /**
      * 查询
