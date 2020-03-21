@@ -39,4 +39,10 @@ public class PaymentController {
         }
         return new CommonResult<>(CommonResult.error,"没有记录");
     }
+
+    @GetMapping(value = "/lb")
+    public String getPaymentLB() {
+        return port;
+    }
+
 }

@@ -13,12 +13,15 @@
 
 ```
 cloud2020 父maven聚合工程 
+
 ├─cloud-api-commons     公共模块
-├─cloud-consumer-order-80      eureka版 订单服务(消费者)
 ├─cloud-provider-payment8001   eureka版 支付服务(服务提供者)
 ├─cloud-provider-payment8002   eureka版 支付服务(服务提供者)
 ├─cloud-provider-payment8004   zookeeper版 服务提供者
+├─cloud-provider-consul-payment8006   consul版 服务提供者
+├─cloud-consumer-order-80      eureka版 订单服务(消费者)
 ├─cloud-consumer-zookeeper-order80   zookeeper版 消费者
+├─cloud-consumer-consul-order80   consul版 消费者
 ├─cloud-eureka-server7001      eureka 高可用服务注册中心
 │─cloud-eureka-server7002      eureka 高可用服务注册中心
 ```
@@ -34,3 +37,4 @@ cloud2020 父maven聚合工程
 - MySQL5.7
 - Maven3.5+
 - Zookeeper 3.5.7
+- Consul 1.7.1
