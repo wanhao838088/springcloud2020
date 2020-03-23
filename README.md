@@ -22,6 +22,7 @@ cloud2020 父maven聚合工程
 ├─cloud-consumer-order-80      eureka版 订单服务(消费者)
 ├─cloud-consumer-zookeeper-order80   zookeeper版 消费者
 ├─cloud-consumer-consul-order80   consul版 消费者
+├─cloud-consumer-feign-order80   open feign版 消费者
 ├─cloud-eureka-server7001      eureka 高可用服务注册中心
 │─cloud-eureka-server7002      eureka 高可用服务注册中心
 ```
