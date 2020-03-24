@@ -24,4 +24,11 @@ public interface PaymentFeignService {
     @GetMapping(value = "/payment/{id}")
     CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
 
+    /**
+     * 模拟超时调用
+     * @return
+     */
+    @GetMapping(value = "/payment/pause")
+    String pause();
+
 }

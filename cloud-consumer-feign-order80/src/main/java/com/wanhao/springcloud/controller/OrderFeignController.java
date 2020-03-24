@@ -24,4 +24,9 @@ public class OrderFeignController {
         return paymentFeignService.getPaymentById(id);
     }
 
+    @GetMapping(value = "/consumer/payment/pause")
+    public String pause() {
+        return paymentFeignService.pause();
+    }
+
 }

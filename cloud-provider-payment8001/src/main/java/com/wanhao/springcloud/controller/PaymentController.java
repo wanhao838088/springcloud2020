@@ -71,4 +71,18 @@ public class PaymentController {
     public String getPaymentLB() {
         return port;
     }
+
+    /**
+     * 暂停3秒钟返回
+     * @return
+     */
+    @GetMapping(value = "pause")
+    public String pause(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return port;
+    }
 }
