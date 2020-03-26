@@ -16,6 +16,7 @@ cloud2020 父maven聚合工程
 
 ├─cloud-api-commons     公共模块
 ├─cloud-provider-payment8001   eureka版 支付服务(服务提供者)
+├─cloud-provider-hystrix-payment8001   hystrix (服务提供者)
 ├─cloud-provider-payment8002   eureka版 支付服务(服务提供者)
 ├─cloud-provider-payment8004   zookeeper版 服务提供者
 ├─cloud-provider-consul-payment8006   consul版 服务提供者
@@ -33,7 +34,7 @@ cloud2020 父maven聚合工程
 - 127.0.0.1   eureka7001.com
 - 127.0.0.1   eureka7002.com
 
-### 软件需求
+### 软件要求
 - JDK1.8
 - MySQL5.7
 - Maven3.5+
