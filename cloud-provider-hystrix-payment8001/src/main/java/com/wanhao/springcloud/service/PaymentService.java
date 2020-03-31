@@ -1,5 +1,7 @@
 package com.wanhao.springcloud.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
@@ -16,17 +18,30 @@ public class PaymentService {
         return "线程池:  " + Thread.currentThread().getName() + "  paymentInfo_OK,id:  " + id ;
     }
 
+    /**
+     * 熔断配置
+     * @param id
+     * @return
+     */
+    @HystrixCommand(fallbackMethod = "paymentInfoTimeOutHandler",commandProperties = {
+            @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",value="3000")
+    })
     public String paymentInfoTimeOut(Integer id) {
         try {
-            TimeUnit.MILLISECONDS.sleep(3000);
+            TimeUnit.MILLISECONDS.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return "线程池:  " + Thread.currentThread().getName() + " id:  " + id + "\t"  + "  耗时 3 (秒): ";
     }
-
-    public String paymentInfoTimeOutHandler(Integer id) {
-        return "线程池:  " + Thread.currentThread().getName() + "  8001系统繁忙或者运行报错，请稍后再试,id:  " + id + "\t" + "o(╥﹏╥)o";
+    /**
+     * 超时等处理
+     * @param id
+     * @return
+     */
+    public String paymentInfoTimeOutHandler(Integer id){
+        return "线程池:  "+Thread.currentThread().getName()+"  8001系统繁忙或者运行报错，请稍后再试,id:  "+id+"\t"+"o(╥﹏╥)o";
     }
+
 
 }
