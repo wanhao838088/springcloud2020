@@ -27,6 +27,7 @@ cloud2020 父maven聚合工程
 ├─cloud-consumer-feign-hystrix-order80   hystrix 消费者
 ├─cloud-eureka-server7001      eureka 高可用服务注册中心
 │─cloud-eureka-server7002      eureka 高可用服务注册中心
+│─cloud-consumer-hystrix-dashboard9001      hystrix dashboard
 ```
 
 
