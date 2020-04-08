@@ -39,7 +39,7 @@ public class PaymentController {
         return new CommonResult<>(CommonResult.error,"操作失败");
     }
 
-    @GetMapping(value = "{id}")
+    @GetMapping(value = "get/{id}")
     public CommonResult<Payment> get(@PathVariable("id")Long id){
         Payment payment = paymentService.getById(id);
         if (payment!=null){
