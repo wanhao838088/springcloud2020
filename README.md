@@ -29,6 +29,7 @@ cloud2020 父maven聚合工程
 │─cloud-eureka-server7002      eureka 高可用服务注册中心
 │─cloud-config-center-3344      config 服务配置中心
 │─cloud-config-client-3355      config 客户端
+│─cloud-config-client-3366      config 客户端
 │─cloud-consumer-hystrix-dashboard9001      hystrix dashboard
 ```
 
