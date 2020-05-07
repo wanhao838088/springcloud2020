@@ -31,9 +31,12 @@ cloud2020 父maven聚合工程
 │─cloud-config-client-3355      config 客户端
 │─cloud-config-client-3366      config 客户端
 │─cloud-consumer-hystrix-dashboard9001      hystrix dashboard
-│─cloud-stream-rabbitmq-provider8801      stream rabbitmq 消费发送
-│─cloud-stream-rabbitmq-consumer8802      stream rabbitmq 消费接收
-│─cloud-stream-rabbitmq-consumer8803      stream rabbitmq 消费接收
+│─cloud-stream-rabbitmq-provider8801      stream rabbitmq 消息发送
+│─cloud-stream-rabbitmq-consumer8802      stream rabbitmq 消息接收
+│─cloud-stream-rabbitmq-consumer8803      stream rabbitmq 消息接收
+│─cloudalibaba-provider-payment9001      nacos
+│─cloudalibaba-provider-payment9002      nacos
+│─cloudalibaba-consumer-nacos-order83      nacos配置中心
 ```
 
 
