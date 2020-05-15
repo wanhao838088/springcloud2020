@@ -38,6 +38,7 @@ cloud2020 父maven聚合工程
 │─cloudalibaba-provider-payment9002      nacos
 │─cloudalibaba-consumer-nacos-order83      nacos消费者
 │─cloudalibaba-config-nacos-client3377      nacos配置中心
+│─cloudalibaba-sentinel-service8401      sentinel
 
 ```
 
