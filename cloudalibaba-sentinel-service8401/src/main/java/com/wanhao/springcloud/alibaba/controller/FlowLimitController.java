@@ -2,6 +2,9 @@ package com.wanhao.springcloud.alibaba.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.wanhao.springcloud.alibaba.handler.CustomBlockHandler;
+import com.wanhao.springcloud.entities.CommonResult;
+import com.wanhao.springcloud.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -70,4 +73,5 @@ public class FlowLimitController {
         //sentinel系统默认的提示：Blocked by Sentinel (flow limiting)
         return "------deal_testHotKey,o(╥﹏╥)o";
     }
+
 }

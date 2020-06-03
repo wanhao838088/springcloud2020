@@ -36,9 +36,12 @@ cloud2020 父maven聚合工程
 │─cloud-stream-rabbitmq-consumer8803      stream rabbitmq 消息接收
 │─cloudalibaba-provider-payment9001      nacos
 │─cloudalibaba-provider-payment9002      nacos
+│─cloudalibaba-provider-payment9003      nacos服务提供
+│─cloudalibaba-provider-payment9004      nacos服务提供
 │─cloudalibaba-consumer-nacos-order83      nacos消费者
 │─cloudalibaba-config-nacos-client3377      nacos配置中心
 │─cloudalibaba-sentinel-service8401      sentinel
+│─cloudalibaba-consumer-nacos-order84      nacos消费者带熔断84
 
 ```
 
