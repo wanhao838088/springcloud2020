@@ -42,6 +42,9 @@ cloud2020 父maven聚合工程
 │─cloudalibaba-config-nacos-client3377      nacos配置中心
 │─cloudalibaba-sentinel-service8401      sentinel
 │─cloudalibaba-consumer-nacos-order84      nacos消费者带熔断84
+│─seata-order-service2001      seata分布式事务 订单模块
+│─seata-account-service2003      seata分布式事务 账户操作模块
+│─seata-storage-service2002      seata分布式事务 库存操作模块
 
 ```
 
@@ -58,3 +61,5 @@ cloud2020 父maven聚合工程
 - Zookeeper 3.5.7
 - Consul 1.7.1
 - RabbitMQ 3.7
+- Seata 0.90+
+- Nacos 1.1.0+
